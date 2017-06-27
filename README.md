@@ -12,9 +12,9 @@ and you're set.
 
 ## Keep update
 
-See [awesome-hammerspoon whiteboard](https://github.com/ashfinal/awesome-hammerspoon/projects/2) for project changlog and todos.
+See [awesome-hammerspoon whiteboard](https://github.com/ashfinal/awesome-hammerspoon/projects/2) for changlog and roadmap.
 
-`cd ~/.hammerspoon && git pull`
+To update, run `cd ~/.hammerspoon && git pull`.
 
 ## What's modal-based key bindings?
 
@@ -157,7 +157,7 @@ This is a "native" frontend for [aria2](https://github.com/aria2/aria2).
 
 ![hsearch](https://github.com/ashfinal/bindata/raw/master/screenshots/awesome-hammerspoon-aria2.png)
 
-You need to run aria2 with RPC enabled before using this. Config aria2 host and token in `~/.hammerspoon/private/awesomeconfig.lua`, then you're ready to go.
+You need to [run aria2 with RPC enabled](https://github.com/ashfinal/awesome-hammerspoon/wiki#run-aria2-with-rpc) before using this. Config aria2 host and token in `~/.hammerspoon/private/awesomeconfig.lua`, then you're ready to go.
 
     aria2_host = "http://localhost:6800/jsonrpc" -- default host
     aria2_token = "token" -- YOUR OWN TOKEN
@@ -232,17 +232,6 @@ Focus to your windows easier.
 </details>
 
 <details>
-<summary>View Mode <kbd>⌥</kbd> + <kbd>V</kbd></summary>
-
-Use <kbd>H/J/K/L</kbd> to scroll around.
-
-Use <kbd>⌃</kbd>/<kbd>⇧</kbd> + <kbd>H/J/K/L</kbd> to move mouse around.
-
-Use <kbd>,</kbd>/<kbd>.</kbd> for mouse left/right click.
-
-</details>
-
-<details>
 <summary>Netspeed Monitor</summary>
 
 Watch your netspeed sitting on the menubar. Support macos's darkmode.
@@ -267,6 +256,8 @@ No description.
 <summary>And More...</summary>
 
 For whatever mode, you can always use:
+
+<kbd>fn</kbd> + <kbd>H/J/K/L</kbd> to navigate, <kbd>fn</kbd> + <kbd>Y/U/I/O</kbd> to scroll, + <kbd>,</kbd> to leftClick, + <kbd>.</kbd> to rightClick.
 
 <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>⇠</kbd> to resize windows to left-half of screen
 
@@ -345,7 +336,6 @@ Modify the file `~/.hammerspoon/private/awesomeconfig.lua`, you should create it
     | Enter Resize Mode          | resizeM_keys                | {{"alt"}, "R"}                  |
     | Enter Cheatsheet Mode      | cheatsheetM_keys            | {{"alt"}, "S"}                  |
     | Show Digital Clock         | showtime_keys               | {{"alt"}, "T"}                  |
-    | Enter View Mode            | viewM_keys                  | {{"alt"}, "V"}                  |
     | Show Window hints          | winhints_keys               | {{"alt"}, "tab"}                |
     | Lefthalf of Screen         | resizeextra_lefthalf_keys   | {{"cmd", "alt"}, "left"}        |
     | Righthalf of Screen        | resizeextra_righthalf_keys  | {{"cmd", "alt"}, "right"}       |
