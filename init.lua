@@ -1,4 +1,4 @@
-hs.hotkey.alertDuration=0
+hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
@@ -29,18 +29,18 @@ if privateconf ~= nil then
     require('private/awesomeconfig')
 end
 
-hsreload_keys = hsreload_keys or {{"cmd", "shift", "ctrl"}, "R"}
+hsreload_keys = hsreload_keys or {{"cmd", "shift", "ctrl", "option"}, "R"}
 if string.len(hsreload_keys[2]) > 0 then
     hs.hotkey.bind(hsreload_keys[1], hsreload_keys[2], "Reload Configuration", function() hs.reload() end)
 end
 
-lockscreen_keys = lockscreen_keys or {{"cmd", "shift", "ctrl"}, "L"}
+lockscreen_keys = lockscreen_keys or {{"cmd", "shift", "ctrl", "option"}, "L"}
 if string.len(lockscreen_keys[2]) > 0 then
     hs.hotkey.bind(lockscreen_keys[1], lockscreen_keys[2],"Lock Screen", function() hs.caffeinate.lockScreen() end)
 end
 
 if modalmgr == nil then
-    showtime_lkeys = showtime_lkeys or {{"cmd", "shift", "ctrl"}, "T"}
+    showtime_lkeys = showtime_lkeys or {{"cmd", "shift", "ctrl", "option"}, "T"}
     if string.len(showtime_lkeys[2]) > 0 then
         hs.hotkey.bind(showtime_lkeys[1], showtime_lkeys[2], 'Show Digital Clock', function() show_time() end)
     end
@@ -68,7 +68,7 @@ function show_time()
     end
 end
 
-showhotkey_keys = showhotkey_keys or {{"cmd", "shift", "ctrl"}, "space"}
+showhotkey_keys = showhotkey_keys or {{"cmd", "shift", "ctrl","option"}, "space"}
 if string.len(showhotkey_keys[2]) > 0 then
     hs.hotkey.bind(showhotkey_keys[1], showhotkey_keys[2], "Toggle Hotkeys Cheatsheet", function() showavailableHotkey() end)
 end
@@ -133,7 +133,7 @@ function modal_stat(color,alpha)
         local mainScreen = hs.screen.mainScreen()
         local mainRes = mainScreen:fullFrame()
         local localMainRes = mainScreen:absoluteToLocal(mainRes)
-        modal_tray = hs.canvas.new(mainScreen:localToAbsolute({x=localMainRes.w-40,y=localMainRes.h-40,w=20,h=20}))
+        modal_tray = hs.canvas.new(mainScreen:localToAbsolute({x=localMainRes.w-120,y=120,w=100,h=100}))
         modal_tray[1] = {action="fill",type="circle",fillColor=white}
         modal_tray[1].fillColor.alpha=0.7
         modal_tray[2] = {action="fill",type="circle",fillColor=white,radius="40%"}
